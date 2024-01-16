@@ -19,10 +19,8 @@ Laravel Menggunakan [Composer](https://getcomposer.org/) untuk mengelola depende
 
 ### Config
 
-Ubah atau Salin file `.env.example` ke `.env` 
-
-1.`php artisan key:generate` untuk generate:key
-1. Set database yang dituju pada file `.env` 
+Ubah atau Salin file `.env.example` ke `.env` 1.`php artisan key:generate` untuk generate:key
+1.Set database yang dituju pada file `.env` 
 
 ### Database
 
