@@ -1,0 +1,63 @@
+/*-----------------------
+    Banners
+------------------------*/
+.banner-layout1 {
+    margin-right: 90px;
+
+    .banner-panel {
+        background-color: $color-white;
+        padding: 90px 0 90px 90px;
+    }
+}
+
+.banner-layout2,
+.banner-layout3 {
+    .banner-panel {
+        position: relative;
+        z-index: 2;
+        background-color: $color-white;
+        padding: 100px;
+    }
+}
+
+.banner-layout2 .banner-panel {
+    margin-left: -160px;
+}
+
+.banner-layout3 .banner-panel {
+    margin-right: -160px;
+}
+
+@media (min-width:1400px) {
+    .banner-layout1 {
+        margin-right: 110px;
+
+        .banner-panel {
+            padding: 110px 0 110px 110px;
+        }
+    }
+}
+
+@media (min-width:320px) and (max-width:992px) {
+    .banner-layout1 {
+        margin-right: 30px;
+
+        .banner-panel {
+            padding: 30px 0 30px 30px;
+        }
+    }
+
+    .banner-layout2 .banner-panel {
+        padding: 40px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@include lg-screens {
+
+    .banner-layout2 .banner-panel,
+    .banner-layout3 .banner-panel {
+        padding: 40px;
+    }
+}

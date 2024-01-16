@@ -1,0 +1,77 @@
+/*-----------------------
+     Fancybox 
+------------------------*/
+.fancybox-item {
+    position: relative;
+    margin-bottom: 30px;
+
+    .fancybox-item__icon {
+        font-size: 20px;
+        line-height: 1;
+        color: $color-dark;
+        margin-bottom: 26px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    .fancybox-item__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .fancybox-item__desc {
+        line-height: 25px;
+        margin-bottom: 0;
+    }
+
+    .fancybox-item__more {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    &:hover {
+        .fancybox-item__icon {
+            @include animation("slideTopDown .8s ease-in-out .1s infinite");
+        }
+
+        .fancybox-item__more .arrow-right {
+            width: 60px;
+        }
+    }
+}
+
+.fancybox-layout1 {
+    .fancybox-item {
+        .fancybox-item__icon {
+            height: 60px;
+        }
+    }
+}
+
+.fancybox-layout2 {
+    .fancybox-item {
+        .fancybox-item__heading {
+            flex: 0 0 90px;
+            padding-right: 30px;
+        }
+
+        .fancybox-item__title {
+            position: relative;
+            font-size: 16px;
+            text-align: right;
+            padding-bottom: 4px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 20px;
+                height: 2px;
+                background-color: $color-dark2;
+            }
+        }
+    }
+}

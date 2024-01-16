@@ -1,0 +1,126 @@
+/*------------------- 
+    Icons
+------------------*/
+.social-icons {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        a {
+            font-size: 15px;
+            color: $color-dark;
+
+            &:hover {
+                color: $color-dark;
+            }
+        }
+    }
+
+    &-white {
+        li a {
+            color: $color-white;
+
+            &:hover {
+                color: $color-gray;
+            }
+        }
+    }
+
+    &.flex-column {
+        li {
+            margin-right: 0;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.icon-arrow-right,
+.icon-arrow-left {
+    font-size: 60%;
+}
+
+.arrow-right {
+    display: inline-block;
+    width: 20px;
+    border: 1px solid $color-dark;
+    position: relative;
+    @include prefix(transition, width .4s linear, webkit moz ms o);
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        top: 2px;
+        right: -2px;
+        border: 1px solid $color-dark;
+        @include prefix(transform, rotate(-45deg), webkit moz ms o);
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        top: -4px;
+        right: -2px;
+        border: 1px solid $color-dark;
+        @include prefix(transform, rotate(45deg), webkit moz ms o);
+    }
+}
+
+.icon-menu {
+    color: $color-dark;
+    display: inline-block;
+    height: 24px;
+    width: 21px;
+    cursor: pointer;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        width: 21px;
+        height: 2px;
+        background-color: $color-dark;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 2px;
+        background-color: $color-dark;
+        @include prefix(transition, width .2s linear, webkit moz ms o);
+    }
+
+    &:before {
+        top: 9px;
+        width: 15px;
+    }
+
+    &:after {
+        top: 21px;
+        width: 11px;
+    }
+
+    &:hover {
+
+        &:before,
+        &:after {
+            width: 21px;
+        }
+    }
+}

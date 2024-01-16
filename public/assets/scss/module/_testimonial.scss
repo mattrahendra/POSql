@@ -1,0 +1,137 @@
+/*----------------------------
+     Testimonial
+------------------------------*/
+.testimonial-item {
+    position: relative;
+
+    .testimonial-item__desc {
+        font-family: $font-heading;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: $color-dark;
+        margin-bottom: 30px;
+    }
+}
+
+.testimonial-item__meta__title {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.testimonial-item__meta__desc {
+    margin-bottom: 0;
+}
+
+.testimonial-item__thumb {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+
+    img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.testimonials {
+    .heading__title {
+        font-size: 14px;
+    }
+
+    .slick-list,
+    .slick-slide {
+        margin: 0;
+    }
+
+    .slick-slider {
+        position: static;
+    }
+
+    .slick-arrow {
+        top: 55%;
+        width: 50px;
+        height: 35px;
+        line-height: 50px;
+        border-radius: 0;
+        color: $color-dark;
+        background-color: transparent;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: $color-dark;
+        }
+
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-family: $font-heading;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        &.slick-prev {
+            left: 0;
+
+            &:after {
+                content: "Prev";
+                text-align: right;
+            }
+        }
+
+        &.slick-next {
+            right: 0;
+
+            &:after {
+                content: "Next";
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .testimonials {
+        .slick-carousel {
+            padding-bottom: 40px;
+        }
+
+        .slick-arrow.slick-arrow {
+            top: 93%;
+
+            &.slick-next {
+                right: 30px;
+            }
+
+            &.slick-prev {
+                left: 30px;
+            }
+        }
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .testimonial-item .testimonial-item__desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (max-width:992px) {
+    .testimonial-item .testimonial-item__desc {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,269 @@
+/*--------------------
+   Buttons
+---------------------*/
+.btn {
+    font-family: $font-heading;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 15px;
+    letter-spacing: 1px;
+    border: 0;
+    border-radius: 1px;
+    overflow: hidden;
+    @include prefix(transition, all .3s linear, webkit moz ms o);
+
+    &:focus,
+    &.active,
+    &:active {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.btn:not(.btn__link) {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $color-black;
+        @include prefix(transform, scaleX(0), webkit moz ms o);
+        @include prefix(transform-origin, right center, webkit moz ms o);
+        @include prefix(transition, transform .24s cubic-bezier(.37, .31, .31, .9), webkit moz ms o);
+    }
+
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 2px;
+        width: 20px;
+        height: 2px;
+        margin-right: 10px;
+        background-color: #494848;
+        transition: all .3s linear;
+    }
+
+    &:hover {
+        &:after {
+            @include prefix(transform, scaleX(1), webkit moz ms o);
+            @include prefix(transform-origin, left center, webkit moz ms o);
+        }
+    }
+}
+
+.btn__primary {
+    background-color: $color-dark;
+    color: $color-white;
+
+    &:hover {
+        color: $color-white;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $color-dark;
+        color: $color-white;
+    }
+
+    &.btn__bordered {
+        background-color: transparent;
+        border: 2px solid $color-dark;
+        color: $color-dark;
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &:before {
+            background-color: $color-dark;
+        }
+    }
+}
+
+.btn__secondary {
+    background-color: $color-dark;
+    color: $color-white;
+
+    &:before {
+        background-color: $color-dark !important;
+    }
+
+    &:hover {
+        color: $color-white;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $color-dark;
+        color: $color-white;
+    }
+
+    &.btn__bordered {
+        background-color: transparent;
+        border: 2px solid $color-dark;
+        color: $color-dark;
+
+        &:hover {
+            border-color: $color-dark;
+            color: $color-white;
+        }
+
+        &:before {
+            background-color: $color-dark;
+        }
+    }
+}
+
+.btn__white {
+    background-color: $color-white;
+    color: $color-dark;
+
+    &:hover {
+        color: $color-white;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $color-white;
+        color: $color-dark;
+    }
+
+    &.btn__bordered {
+        background-color: transparent;
+        border: 2px solid $color-white;
+        color: $color-white;
+
+        &:hover {
+            color: $color-dark;
+        }
+
+        &:before {
+            background-color: $color-white;
+        }
+    }
+}
+
+.btn__bordered {
+    background-color: transparent;
+}
+
+.btn__link {
+    background-color: transparent;
+    border-color: transparent;
+    min-width: 0;
+    line-height: 1;
+    height: auto;
+    padding: 0 0 4px 0;
+    border: none;
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+    }
+
+    &:before {
+        width: 0;
+        z-index: 2;
+        @include prefix(transition, all .6s linear, webkit moz ms o);
+    }
+
+    &:hover:before {
+        width: 100%;
+    }
+
+    &.btn__primary {
+        color: $color-dark;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color-dark;
+            background-color: transparent;
+            border-color: transparent;
+
+            &:before {
+                background-color: $color-dark;
+            }
+        }
+
+        &:after {
+            background-color: $color-dark;
+        }
+    }
+
+    &.btn__secondary {
+        color: $color-dark;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $color-dark;
+            background-color: transparent;
+            border-color: transparent;
+
+            &:before {
+                background-color: $color-dark;
+            }
+        }
+
+        &:after {
+            background-color: $color-dark;
+        }
+    }
+}
+
+.btn__rounded {
+    border-radius: 50px;
+}
+
+.btn__block {
+    width: 100%;
+}
+
+.btn__lg {
+    min-width: 270px;
+}
+
+.btn__icon {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+
+    span {
+        margin-right: 5px;
+    }
+
+    i {
+        margin-left: 5px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .btn {
+        font-size: 13px;
+        min-width: 100px;
+        height: 40px;
+        line-height: 40px;
+    }
+}

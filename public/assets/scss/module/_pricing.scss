@@ -1,0 +1,122 @@
+/*--------------------------
+        pricing
+--------------------------*/
+.pricing-item {
+    position: relative;
+    background-color: $color-dark;
+    box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.08);
+    @include prefix(transition, all .3s ease, webkit moz ms o);
+    margin-bottom: 30px;
+
+    .pricing-item__header {
+        position: relative;
+        padding: 57px 60px 60px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - 40px);
+            height: 2px;
+            background-color: #d7d7d7;
+        }
+    }
+
+    .pricing-item__title {
+        color: $color-white;
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .pricing-item__price {
+        color: $color-white;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .pricing-item__currency {
+        font-size: 45px;
+    }
+
+    .pricing-item__time {
+        font-size: 15px;
+    }
+
+    .pricing-item__content {
+        padding: 45px 60px 60px;
+    }
+
+    .pricing-item__list {
+        margin-bottom: 36px;
+
+        li {
+            color: $color-white;
+            position: relative;
+            padding-left: 27px;
+            font-size: 15px;
+            margin-bottom: 8px;
+            text-transform: capitalize;
+
+            &:after {
+                content: "\f00c";
+                font-family: FontAwesome;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $color-body;
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .page-title-layout4+.pricing {
+        margin-top: 0;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .pricing .container {
+        max-width: none;
+        padding: 0 15px;
+    }
+
+    .pricing-item {
+
+        .pricing-item__header,
+        .pricing-item__content {
+            padding: 20px;
+        }
+
+        .pricing-item__list {
+            margin-bottom: 20px;
+        }
+
+        .pricing-item__title {
+            margin-bottom: 30px;
+        }
+
+        .pricing-item__price {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .pricing-item {
+        .pricing-item__list {
+            margin-bottom: 20px;
+        }
+
+        .pricing-item__header,
+        .pricing-item__content {
+            padding: 20px;
+        }
+    }
+}

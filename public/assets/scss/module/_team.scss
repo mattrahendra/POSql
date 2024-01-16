@@ -1,0 +1,79 @@
+/*--------------------
+     Team
+---------------------*/
+.member {
+    position: relative;
+    margin-bottom: 40px;
+
+    .member__img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: transform .9s linear, filter .5s linear;
+        }
+    }
+
+    &:hover .member__img img {
+        filter: grayscale(100%);
+        @include prefix(transform, scale(1.05) rotate(1deg), webkit moz ms o);
+    }
+
+    .member__info {
+        padding-top: 27px;
+
+        .member__name {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .member__desc {
+            margin-bottom: 0;
+        }
+    }
+
+    .social-icons li a {
+        font-size: 16px;
+    }
+
+    .member__img-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        padding: 35px;
+        background-color: rgba($color-dark, 95%);
+        @include prefix(transition, all .4s linear, webkit moz ms o);
+
+        .social-icons li a {
+            color: $color-white;
+
+            &:hover {
+                color: $color-dark;
+            }
+        }
+
+        .member__info .member__name,
+        .member__info .member__desc {
+            color: $color-white;
+        }
+    }
+
+    &:hover .member__img-hover {
+        opacity: 1;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .member {
+        margin-bottom: 30px;
+
+        .member__info .member__name {
+            font-size: 17px;
+        }
+    }
+}

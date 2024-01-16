@@ -1,0 +1,38 @@
+/*----------------------------
+    Contact
+----------------------------*/
+.contact-box {
+    position: relative;
+    min-height: 70px;
+    margin-bottom: 30px;
+
+    .contact-box__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        i {
+            color: #e8e8e8;
+            font-size: 65px;
+            line-height: 1;
+        }
+    }
+
+    .contact-box__content {
+        padding-left: 20px;
+    }
+
+    .contact-box__title {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .contact-box__desc {
+        margin-bottom: 0;
+    }
+}
+
+.contact-info-layout2 .contact-box {
+    min-height: auto;
+}

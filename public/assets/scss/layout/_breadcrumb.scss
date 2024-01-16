@@ -1,0 +1,25 @@
+/*-------------------------
+    Breadcrumb
+--------------------------*/
+.breadcrumb {
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+
+    .breadcrumb-item {
+        font-family: $font-heading;
+
+        a {
+            color: $color-dark2;
+        }
+
+        &.active {
+            color: $color-dark2;
+        }
+
+        +.breadcrumb-item::before {
+            content: "/";
+            color: $color-dark2;
+        }
+    }
+}

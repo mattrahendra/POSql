@@ -1,0 +1,192 @@
+/*-------------------------
+    Call To Action
+---------------------------*/
+.cta__box {
+    background-color: $color-dark;
+    padding: 37px;
+
+    img {
+        margin-bottom: 27px;
+    }
+
+    .cta__box-title {
+        font-size: 17px;
+        line-height: 1.4;
+        color: $color-white;
+        margin-bottom: 0;
+    }
+}
+
+.cta__desc {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.cta__subtitle {
+    font-size: 17px;
+    font-weight: 700;
+    display: block;
+}
+
+.cta-layout1 {
+    padding-top: 210px;
+    padding-bottom: 210px;
+
+    .cta__title {
+        font-size: 85px;
+        color: $color-white;
+    }
+
+    .cta__desc {
+        color: $color-white;
+    }
+}
+
+.cta-layout2 {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    .cta__subtitle {
+        color: $color-white;
+    }
+
+    .cta__title {
+        font-size: 95px;
+        color: $color-white;
+    }
+}
+
+.cta-layout3 {
+    padding-top: 160px;
+    padding-bottom: 160px;
+
+    .cta__subtitle {
+        color: $color-white;
+    }
+
+    .cta__title {
+        font-size: 75px;
+        color: $color-white;
+    }
+}
+
+.cta-layout4 {
+    padding-top: 150px;
+    padding-bottom: 140px;
+
+    .cta__subtitle {
+        color: $color-white;
+    }
+
+    .cta__title {
+        font-size: 75px;
+        color: $color-white;
+    }
+}
+
+.cta-layout5 {
+    padding-top: 190px;
+    padding-bottom: 190px;
+
+    .cta__subtitle {
+        color: $color-white;
+    }
+
+    .cta__title {
+        font-size: 85px;
+        color: $color-white;
+    }
+
+    .cta__desc {
+        font-size: 14px;
+        color: $color-white;
+    }
+
+    .cta__form {
+        max-width: 570px;
+        margin: 30px auto;
+
+        .form-control {
+            color: $color-white;
+            max-width: 370px;
+
+            &::-webkit-input-placeholder {
+                color: $color-white;
+            }
+
+            &:-moz-placeholder {
+                color: $color-white;
+            }
+
+            &::-moz-placeholder {
+                color: $color-white;
+            }
+
+            &:-ms-input-placeholder {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+
+    .cta__desc {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .cta-layout1,
+    .cta-layout2,
+    .cta-layout3,
+    .cta-layout4,
+    .cta-layout5 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .cta__title {
+            font-size: 50px;
+            margin-bottom: 30px !important;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .cta__box {
+        padding: 15px;
+    }
+
+    .cta__desc {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .cta-layout1,
+    .cta-layout2,
+    .cta-layout3,
+    .cta-layout4,
+    .cta-layout5 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .cta__title {
+            font-size: 30px;
+        }
+    }
+
+    .cta-layout5 .cta__form .form-control {
+        height: 40px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+    .cta-layout5 .cta__form {
+        display: block !important;
+
+        .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+/*-------------------------
+    page title 
+-------------------------*/
+.header-transparent+.page-title {
+    margin-top: -100px;
+}
+
+.pagetitle__subheading {
+    font-family: $font-body;
+    font-size: 17px;
+    line-height: 1;
+    color: $color-gray;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.pagetitle__heading {
+    color: $color-white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.pagetitle__desc {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $color-white;
+}
+
+.page-title {
+    padding-top: 28px;
+    padding-bottom: 5px;
+
+}
+
+.page-title-layout1 {
+    .breadcrumb .breadcrumb-item {
+
+        a {
+            color: $color-white;
+        }
+
+        &.active {
+            color: #f4f4f4;
+        }
+
+        +.breadcrumb-item::before {
+            content: "/";
+            color: $color-white;
+        }
+    }
+}
+
+.page-title-layout2 {
+    padding-top: 195px;
+    padding-bottom: 195px;
+
+    .pagetitle__heading {
+        color: $color-dark;
+        font-size: 55px;
+        font-weight: 800;
+    }
+}
+
+.page-title-layout3 {
+    padding-top: 195px;
+    padding-bottom: 195px;
+
+    .pagetitle__heading {
+        color: $color-white;
+        font-size: 65px;
+        font-weight: 800;
+    }
+}
+
+.page-title-layout4 {
+    .breadcrumb:before {
+        content: '';
+        position: absolute;
+        left: -70px;
+        top: 50%;
+        width: 40px;
+        height: 2px;
+        background-color: $color-dark2;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+    }
+}
+
+.page-title-layout6 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .pagetitle__heading {
+        color: $color-white;
+        font-size: 45px;
+        font-weight: 800;
+    }
+}
+
+.page-title-layout7 {
+    padding-top: 370px;
+    padding-bottom: 270px;
+
+    .pagetitle__heading {
+        color: $color-dark;
+        font-size: 55px;
+        font-weight: 800;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .pagetitle__heading {
+        font-size: 19px;
+    }
+
+    .page-title-layout2 {
+        .pagetitle__heading {
+            font-size: 30px;
+        }
+
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}

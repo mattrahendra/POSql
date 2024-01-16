@@ -1,0 +1,163 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    padding-top: 120px;
+    padding-bottom: 70px;
+    background-color: $color-dark;
+
+    .footer-widget {
+        margin-bottom: 35px;
+    }
+
+    .footer-widget__title {
+        color: $color-white;
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: 700;
+        margin-bottom: 19px;
+    }
+
+    .footer-newsletter {
+        margin-bottom: 65px;
+    }
+
+    .footer-newsletter__title {
+        span {
+            color: $color-white;
+            font-size: 23px;
+            display: block;
+            margin-bottom: 13px;
+        }
+
+        a {
+            border-bottom: 2px solid $color-white;
+
+            &:hover {
+                color: $color-white;
+                border-bottom-color: rgba($color-white, 0.5);
+            }
+        }
+    }
+
+    .footer-newsletter__form {
+        position: relative;
+
+        .form-control {
+            color: $color-white;
+            background-color: transparent;
+            border: 2px solid $color-white;
+            padding-left: 20px;
+
+            &:focus {
+                background-color: transparent;
+                border-color: $color-gray;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $color-white;
+            }
+
+            &:-moz-placeholder {
+                color: $color-white;
+            }
+
+            &::-moz-placeholder {
+                color: $color-white;
+            }
+
+            &:-ms-input-placeholder {
+                color: $color-white;
+            }
+        }
+
+        .submit-btn {
+            width: 55px;
+            height: 55px;
+            line-height: 53px;
+            margin-left: -2px;
+            font-size: 18px;
+            color: $color-white;
+            border: 2px solid $color-white;
+            @include prefix(transition, .3s ease, webkit moz ms o);
+
+            &:hover {
+                color: $color-dark;
+                background-color: $color-white;
+            }
+        }
+    }
+
+    .social-icons li a {
+        color: $color-white;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    .footer-copyright a {
+        color: rgba($color-gray, 0.8);
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    overflow: hidden;
+    border-radius: 3px;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-black;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-black;
+    }
+}
+
+#scrollTopBtn.actived {
+    right: 30px;
+    opacity: 1;
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .footer {
+        padding-top: 40px;
+        padding-bottom: 30px;
+
+        .footer-widget__title {
+            margin-bottom: 10px;
+        }
+
+        .footer-newsletter__title span {
+            font-size: 16px;
+        }
+
+        .footer-copyright {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #scrollTopBtn.actived {
+        right: 20px;
+    }
+}

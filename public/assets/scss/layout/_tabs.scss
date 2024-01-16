@@ -1,0 +1,54 @@
+/*--------------------
+    Tabs
+--------------------*/
+.nav-tabs {
+    border-bottom: 1px solid $color-dark;
+
+    .nav__link {
+        position: relative;
+        color: $color-dark2;
+        font-family: $font-heading;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px;
+        margin-right: 20px;
+        display: block;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            margin: auto;
+            display: block;
+            background-color: $color-dark;
+            -webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.active {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tab-content {
+    padding-top: 36px;
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .nav__link {
+        margin-right: 7px;
+    }
+}

@@ -1,0 +1,41 @@
+/*----------------------
+    Countdown
+-----------------------*/
+.countdown-row {
+    display: flex;
+}
+
+.countdown-section {
+    display: block;
+    width: 100%;
+
+    &:last-of-type {
+        display: none;
+    }
+}
+
+.countdown-amount {
+    color: $color-dark;
+    font-family: $font-heading;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.countdown-period {
+    color: $color-dark;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .countdown-amount {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,98 @@
+/*----------------------
+    Page 404
+-----------------------*/
+.page-404 {
+    .error-code {
+        font-size: 130px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    .error-title {
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 15px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -70px;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background-color: $color-dark;
+            @include prefix(transform, translateY(-50%), webkit moz ms o);
+        }
+    }
+
+    .error-subtitle {
+        font-size: 44px;
+        margin-bottom: 32px;
+    }
+
+    .subscribe-form {
+        position: relative;
+
+        .form-control {
+            color: $color-dark;
+            background-color: transparent;
+            border: 2px solid $color-dark;
+            padding-left: 20px;
+
+            &:focus {
+                background-color: transparent;
+                border-color: $color-dark;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $color-dark;
+            }
+
+            &:-moz-placeholder {
+                color: $color-dark;
+            }
+
+            &::-moz-placeholder {
+                color: $color-dark;
+            }
+
+            &:-ms-input-placeholder {
+                color: $color-dark;
+            }
+        }
+
+        .submit-btn {
+            width: 55px;
+            height: 55px;
+            line-height: 53px;
+            margin-left: -2px;
+            font-size: 18px;
+            color: $color-dark;
+            border: 2px solid $color-dark;
+            @include prefix(transition, .3s ease, webkit moz ms o);
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-dark;
+            }
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-404 {
+        padding-top: 80px;
+
+        .error-code {
+            font-size: 90px;
+            margin-bottom: 20px;
+        }
+
+        .error-subtitle {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+}

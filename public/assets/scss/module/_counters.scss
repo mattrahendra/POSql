@@ -1,0 +1,41 @@
+/*---------------------------
+    Counters
+--------------------------*/
+.counter-item {
+    .counter {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 13px;
+    }
+
+    .counter-item__desc {
+        color: $color-dark;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: .5px;
+        margin-bottom: 0;
+    }
+}
+
+.counter-light {
+
+    .counter-item .counter,
+    .counter-item .counter-item__desc {
+        color: $color-white;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-screens {
+    .counter-item {
+        .counter {
+            font-size: 35px;
+        }
+
+        .counter-item__desc {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/*----------------------- 
+    Clients
+-----------------------*/
+.clients {
+    .slick-carousel {
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        padding: 0 20px;
+        margin: 20px 0;
+    }
+
+    .slick-list {
+        overflow: visible;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            width: 1px;
+            height: calc(100% + 40px);
+            height: -webkit-calc(100% + 40px);
+            background-color: #e9e9e9;
+        }
+    }
+
+    .slick-slide {
+        -webkit-transition: opacity .3s ease, visibility .3s ease;
+        -moz-transition: opacity .3s ease, visibility .3s ease;
+        -ms-transition: opacity .3s ease, visibility .3s ease;
+        -o-transition: opacity .3s ease, visibility .3s ease;
+        transition: opacity .3s ease, visibility .3s ease;
+
+        &.slick-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:not(.slick-active) {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .client {
+        position: relative;
+        text-align: center;
+        display: flex;
+        display: -ms-flexbox;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        @include prefix(transition, .3s ease, webkit moz ms o);
+
+        img {
+            width: auto !important;
+            max-width: 100%;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 1px;
+            height: 160px;
+            background-color: #e9e9e9;
+        }
+    }
+}
