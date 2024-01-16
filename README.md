@@ -24,7 +24,7 @@ Ubah atau Salin file `.env.example` ke `.env` 1.`php artisan key:generate` untuk
 
 ### Database
 
-1. Migrate tabel database `php artisan migrate`
+1. Migrate tabel database `php artisan migrate` atau bisa menggunakan database yang telah disediakan.
 1. `php artisan db:seed`, Ini akan menginisialisasi pengaturan dan membuat pengguna admin untuk Anda. [email: admin@gmail.com - password: admin123]
 
 ### Install Node Dependencies
